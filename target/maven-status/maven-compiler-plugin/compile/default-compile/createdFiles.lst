@@ -1,0 +1,8 @@
+com/agenda/agenda/model/Contato.class
+com/agenda/agenda/configuration/SecurityConfig.class
+com/agenda/agenda/services/impl/AgendaServiceImpl.class
+com/agenda/agenda/controller/AgendaControllerAPI.class
+com/agenda/agenda/services/AgendaService.class
+com/agenda/agenda/AgendaApplication.class
+com/agenda/agenda/controller/AgendaController.class
+com/agenda/agenda/repository/AgendaRepository.class

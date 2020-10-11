@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <title>Agenda</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    .center {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-light bg-dark">
+    <span class="navbar-brand mb-0 h1" style="font-weight: bold; color:white">Agenda</span>
+    <a class="btn btn-primary" href="/cadastrafunc" role="button">Cadastrar Funcionario</a>
+</nav>
+<nav aria-label="breadcrumb" class="bg-dark" style="top=30;">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Agenda</li>
+    </ol>
+</nav>
+<div id="main" class="center">
+    <!-- class="table table-bordered table-hover" -->
+    <table class="table table-bordered table-hover">
+    <tr>
+        <th>id</th>
+        <th>Nome</th>
+        <th>Endereço</th>
+        <th>Telefone</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr th:each="contatos : ${contatos}">
+        <td><span th:text="${contatos.id}"></span></td>
+        <td><span th:text="${contatos.nome}"></span></td>
+        <td><span th:text="${contatos.endereco}"></span></td>
+        <td><span th:text="${contatos.telefone}"></span></td>
+        <td><span th:text="${contatos.email}"></span></td>
+        <td><a th:href="@{/contatos/delete/{id}(id=${contatos.id})}"><span class="material-icons">delete</span></a></td>
+        <td><a th:href="@{/contatos/edit/{id}(id=${contatos.id})}"><span class="material-icons">edit</span></a></td>
+            <!--    <a th:href="@{/category/edit/{id}(id=${category.idCategory})}">view</a> -->
+    </tr>
+</table>
+</div>
+</body>
+</html>
