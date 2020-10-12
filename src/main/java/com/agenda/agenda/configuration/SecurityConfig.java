@@ -16,7 +16,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
             "/",
             "/contatos",
             "/contatos/{id}",
-            "/api/contatos"
+            "/api/contatos",
+            "/api/{id}"
     };
 
     @Override
